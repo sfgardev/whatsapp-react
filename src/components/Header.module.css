@@ -1,0 +1,29 @@
+.header {
+  background-color: #f0f2f5;
+  padding: 1rem;
+  border-right: 2px solid #8f8b8b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.newChat,
+.logout {
+  transition: all 0.25s;
+}
+
+.newChat:hover {
+  fill: #aca7a7;
+}
+
+.logout:hover path {
+  stroke: #aca7a7;
+}
+
+@media (prefers-color-scheme: dark) {
+  .header {
+    background-color: #1717173a;
+  }
+}

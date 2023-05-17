@@ -1,0 +1,12 @@
+.loginForm {
+    margin: 0 auto;
+    max-width: 500px;
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+}
+
+.loginForm input {
+    padding: 0.5rem 1rem; 
+    font-size: 1rem;
+}

@@ -1,0 +1,23 @@
+.addContactForm {
+    width: 100%;
+  display: flex;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+.addContactForm div {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  gap: .5rem;
+}
+
+.addContactForm input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.addContactForm button {
+    align-self: flex-end;
+}

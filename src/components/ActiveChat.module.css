@@ -1,0 +1,32 @@
+.activeChat {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  padding: 1rem;
+}
+
+.activeChat ul {
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-flow: column;
+  gap: 0.75rem;
+  overflow-y: auto;
+}
+
+.activeChat li {
+  border: 1px solid #ccc;
+  width: fit-content;
+  border-radius: 4px;
+  padding: .25rem 1rem;
+}
+
+.outgoing {
+  align-self: flex-end;
+  text-align: right;
+  background-color: rgb(101, 247, 101);
+  color: rgb(10, 10, 10);
+}
+
+.incoming {
+  text-align: left;
+}
