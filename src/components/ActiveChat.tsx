@@ -6,6 +6,7 @@ import { AuthContext } from "../context/AuthContext";
 import SendMessageForm from "./SendMessageForm";
 import { sendMessage } from "../api/sendMessage";
 import { toReversed } from "../utils";
+import { useInterval } from "../hooks/useInterval";
 
 type ActiveChatProps = {
   chatId: string | null;
@@ -27,10 +28,12 @@ const ActiveChat = ({ chatId }: ActiveChatProps) => {
       apiTokenInstance,
       chatId
     );
-    if (chatHistory) {
+    if (Array.isArray(chatHistory)) {
       setMessages(chatHistory);
     }
   }, [idInstance, apiTokenInstance, chatId]);
+
+  useInterval(fetchChatHistory, 1000);
 
   useEffect(() => {
     fetchChatHistory();
@@ -43,7 +46,6 @@ const ActiveChat = ({ chatId }: ActiveChatProps) => {
   const onSendMessage = async (value: string) => {
     if (!chatId) return;
     await sendMessage(idInstance, apiTokenInstance, chatId, value);
-    setTimeout(fetchChatHistory, 1000);
   };
 
   if (!chatId) {
