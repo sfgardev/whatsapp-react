@@ -33,7 +33,7 @@ const ActiveChat = ({ chatId }: ActiveChatProps) => {
     }
   }, [idInstance, apiTokenInstance, chatId]);
 
-  useInterval(fetchChatHistory, 1000);
+  useInterval(fetchChatHistory);
 
   useEffect(() => {
     fetchChatHistory();

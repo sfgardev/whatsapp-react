@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export const useInterval = (fn: () => void, delay = 1000) => {
+export const useInterval = (fn: () => void, delay = 2000) => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       fn();
